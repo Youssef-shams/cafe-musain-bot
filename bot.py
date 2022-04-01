@@ -78,4 +78,4 @@ async def alez(ctx):
 
 
 
-client.run('OTU1NjAyMjY1NzEwOTQ0Mjc2.YjkD9g.ijkT9iY40OAFogqnf7q0da0r_1Q')
+client.run('OTU1NjAyMjY1NzEwOTQ0Mjc2.YjkD9g.n0Qqhng0EA63JOcxwzajjm--wi0')
