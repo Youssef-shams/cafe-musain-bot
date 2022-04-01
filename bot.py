@@ -17,7 +17,7 @@ async def on_ready():
 @client.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("there is no command named like that dumbass")
+        await ctx.send("there is no command named like that.")
 
 #kick
 @client.command()
@@ -46,7 +46,7 @@ async def unban(ctx, member: discord.Member, *, reason=None):
 #mute
 @client.command(description="mutes the specified user")
 @commands.has_permissions(manage_messages=True)
-async def mute(ctx, member: discord.Member, mute_time : int, *, reason=None):
+async def mute(ctx, member: discord.Member, reason=None):
     guild = ctx.guild
     muteRole = discord.utils.get(guild.roles, name="Muted")
     verified = discord.utils.get(guild.roles, name="verified")
@@ -59,9 +59,7 @@ async def mute(ctx, member: discord.Member, mute_time : int, *, reason=None):
     await member.add_roles(muteRole, reason=reason)
     await member.remove_roles(verified)
     await ctx.send(f'Muted {member.mention} for {reason}')    
-    await member.send(f'you are muted in {guild.name} for {reason}')  
-    await asyncio.sleep(mute_time)
-    await member.send(f'your mute time has ended in {guild}')       
+    await member.send(f'you are muted in {guild.name} for {reason}')      
 
 #unmute
 @client.command(description="Unmutes the specifies user")
@@ -73,11 +71,11 @@ async def unmute(ctx, member : discord.Member):
     await member.remove_roles(muteRole)
     await member.add_roles(verified)
     await ctx.send(f'Unmuted {member.mention}')
-    await member.send(f'you are unmuted in cafe musain')
+    await member.send(f'an admin unmuted in cafe musain')
 
 @client.command()
 async def alez(ctx):
-    await ctx.send("she is VERY SAD")
+    await ctx.send("she is halal waifu to H :ring:")
 
 
 
