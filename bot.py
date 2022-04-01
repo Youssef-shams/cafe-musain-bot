@@ -1,7 +1,6 @@
 import asyncio
 from http import client
 from multiprocessing.connection import Client
-from tkinter import N
 import discord
 from discord.ext import commands
 import random
