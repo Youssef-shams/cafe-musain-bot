@@ -1,10 +1,9 @@
 import asyncio
-from http import client
-from multiprocessing.connection import Client
 import discord
 from discord.ext import commands
 import random
 
+token = 'OTU1NjAyMjY1NzEwOTQ0Mjc2.YjkD9g.hJfVdF6lk0Z073Z_dM9MAEGxDOc'
 intents=discord.Intents.all()
 client = commands.Bot(command_prefix='?')
 
@@ -78,4 +77,4 @@ async def alez(ctx):
 
 
 
-client.run('OTU1NjAyMjY1NzEwOTQ0Mjc2.YjkD9g.n0Qqhng0EA63JOcxwzajjm--wi0')
+client.run(token)
