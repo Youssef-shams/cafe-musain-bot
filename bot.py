@@ -2,8 +2,8 @@ import asyncio
 import discord
 from discord.ext import commands
 import random
+from config import TOKEN
 
-token = 'OTU1NjAyMjY1NzEwOTQ0Mjc2.YjkD9g.hJfVdF6lk0Z073Z_dM9MAEGxDOc'
 intents=discord.Intents.all()
 client = commands.Bot(command_prefix='?')
 
@@ -54,8 +54,8 @@ async def mute(ctx, member: discord.Member, reason=None):
 
         for channel in guild.channels:
             await channel.set_permissions(muteRole, send_messages=False, )
-    await member.add_roles(muteRole, reason=reason)
     await member.remove_roles(verified)
+    await member.add_roles(muteRole, reason=reason)
     await ctx.send(f'Muted {member.mention} for {reason}')    
     await member.send(f'you are muted in {guild.name} for {reason}')      
 
@@ -77,4 +77,4 @@ async def alez(ctx):
 
 
 
-client.run(token)
+client.run(TOKEN)
