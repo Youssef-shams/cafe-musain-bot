@@ -5,8 +5,7 @@ import random
 from config import TOKEN
 
 intents=discord.Intents.all()
-client = commands.Bot(command_prefix='?')
-
+client = commands.Bot(command_prefix='.')
 @client.event
 async def on_ready():
     print("bot is ready")
@@ -75,6 +74,9 @@ async def unmute(ctx, member : discord.Member):
 async def alez(ctx):
     await ctx.send("she is halal waifu to H :ring:")
 
+@client.command()
+async def witch(ctx):
+    await ctx.send(f'<@332633328114991114> we need you')
 
 
 client.run(TOKEN)
