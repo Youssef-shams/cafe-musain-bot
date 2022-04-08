@@ -2,7 +2,7 @@ import asyncio
 import discord
 from discord.ext import commands
 import random
-from config import TOKEN
+from config import TOKEN, TOKEN2
 
 intents=discord.Intents.all()
 client = commands.Bot(command_prefix='.')
@@ -79,4 +79,4 @@ async def witch(ctx):
     await ctx.send(f'<@332633328114991114> we need you')
 
 
-client.run(TOKEN)
+client.run(TOKEN + TOKEN2)
