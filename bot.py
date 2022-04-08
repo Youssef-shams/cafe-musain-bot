@@ -72,7 +72,7 @@ async def unmute(ctx, member : discord.Member):
 
 @client.command()
 async def alez(ctx):
-    await ctx.send("she is halal waifu to H :ring:")
+    await ctx.send("she is halal waifu to <@766684442940538922> :ring:")
 
 @client.command()
 async def witch(ctx):
