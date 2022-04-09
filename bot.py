@@ -71,6 +71,19 @@ async def unmute(ctx, member : discord.Member):
     await member.send(f'an admin unmuted in cafe musain')
 
 @client.command()
+@commands.has_permissions(manage_roles=True)
+async def moderator(ctx, member : discord.Member):
+    authId = ctx.author.id
+    micolId = '232549322570022932'
+    mod = discord.utils.get(ctx.guild.roles, name="Inner Party Comrades")
+    if authId is micolId:
+
+        await member.add_role(mod)
+        await ctx.send(f'{member.mention} has been nominated for being a part of our INNER PARTY :tada: :partying_face:')
+    else:
+        await ctx.send("my guy this command is only available to the glorious <@523249322570022932>")
+
+@client.command()
 async def alez(ctx):
     await ctx.send("she is halal waifu to <@766684442940538922> :ring:")
 
