@@ -74,7 +74,7 @@ async def unmute(ctx, member : discord.Member):
 @commands.has_permissions(manage_roles=True)
 async def moderator(ctx, member : discord.Member):
     authId = ctx.author.id
-    micolId = '232549322570022932'
+    micolId = '523249322570022932'
     mod = discord.utils.get(ctx.guild.roles, name="Inner Party Comrades")
     if authId is micolId:
 
