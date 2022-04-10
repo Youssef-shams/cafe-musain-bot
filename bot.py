@@ -6,6 +6,7 @@ from config import TOKEN, TOKEN2
 
 intents=discord.Intents.all()
 client = commands.Bot(command_prefix='.')
+
 @client.event
 async def on_ready():
     print("bot is ready")
@@ -73,6 +74,10 @@ async def unmute(ctx, member : discord.Member):
 @client.command()
 async def alez(ctx):
     await ctx.send("she is halal waifu to <@766684442940538922> :ring:")
+
+@client.command()
+async def iikimo(ctx):
+    await ctx.send("<@445245966975500288> you have been summoned")
 
 @client.command()
 async def witch(ctx):
