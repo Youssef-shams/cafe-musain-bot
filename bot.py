@@ -13,6 +13,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
+    guild = member.guild
     verified = discord.utils.get(guild.roles, name="verified")
     await member.add_roles(verified)
 
