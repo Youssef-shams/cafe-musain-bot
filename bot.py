@@ -11,6 +11,10 @@ client = commands.Bot(command_prefix='.')
 async def on_ready():
     print("bot is ready")
 
+@client.event
+async def on_member_join(member):
+    await member.add_roles(verified)
+
 #fake command error
 @client.event
 async def on_command_error(ctx, error):
