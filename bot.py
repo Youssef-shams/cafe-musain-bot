@@ -11,11 +11,10 @@ client = commands.Bot(command_prefix='.')
 async def on_ready():
     print("bot is ready")
 
-@client.event
-async def on_member_join(member : discord.Member):
-    guild = member.guild
-    verified = discord.utils.get(guild.roles, name="verified")
-    await member.add_roles(verified)
+@client.event 
+async def on_member_join(member):
+  verified = get(member.guild.roles, id=958514497256042496)
+  await member.add_roles(verified)
 
 #fake command error
 @client.event
