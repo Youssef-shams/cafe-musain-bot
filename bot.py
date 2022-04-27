@@ -79,7 +79,7 @@ async def unmute(ctx, member : discord.Member):
 
 @client.command()
 async def alez(ctx):
-    await ctx.send("she is halal waifu to <@766684442940538922> :ring:")
+    await ctx.send("<@614138241385234433> is halal waifu to <@523249322570022932> :ring:")
 
 @client.command()
 async def iikimo(ctx):
